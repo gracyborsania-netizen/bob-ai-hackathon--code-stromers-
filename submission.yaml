@@ -53,8 +53,9 @@ submission:
     It helps identify potential safety concerns early while reducing manual effort and improving the completeness of regulatory submissions.
 
   known_limitations: >                 # Optional but recommended — be honest about gaps
-    The system depends on the quality and completeness of the available safety and regulatory data.
-    AI-generated results are intended to support expert review and should not replace professional medical or regulatory judgment.
+   1. The accuracy of results depends on the quality and completeness of the available data.
+   2. AI-generated results require review by qualified medical or regulatory professionals before making final decisions.
+   3. The system may not cover every drug safety scenario or regulatory requirement.
 
 # =============================================================================
 # ARTIFACT LOCATIONS
