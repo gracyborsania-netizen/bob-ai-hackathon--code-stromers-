@@ -1,4 +1,4 @@
-# 🚀 [Your Project Title Here]
+# 🚀 [PHARMAGUARD AI]
 
 > ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
 
@@ -8,18 +8,18 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
+| **Team Name** | [Code stromers] |
 | **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Lead** | [Gracy] — [gracyborsania@gmail.com] |
+| **Members** | [vishva], [Siya], [Prushti] |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+> In 2–3 sentences: What problem does your project solve? Who experiences this problem'
+> [Detect potential drug safety signals from large amounts of pharmaceutical safety data, reducing the time and effort required for manual analysis.
+Ensure regulatory submissions are complete and meet required standards before submission, reducing errors and improving submission readiness.]
 
 ---
 
@@ -27,17 +27,19 @@
 
 > In 2–3 sentences: What did you build? How does it solve the problem above?
 
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+[An AI-powered system that analyzes drug safety data to detect potential safety signals and highlights possible risks.
+It also checks regulatory submission documents for completeness, identifies missing or incorrect information, and provides a readiness score before submission.]
+
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **Feature 1:** [AI Safety Signal Detection – Detects potential drug safety risks from available data.]
+- **Feature 2:** [Risk Alerts – Highlights important safety concerns for review.]
+- **Feature 3:** [Submission Readiness Check – Checks whether required regulatory information is complete.]
+- **Feature 4:** [Missing Information Detection – Identifies incomplete or missing details.]
+- **Feature 5:** [Readiness Score – Provides a score indicating how ready the submission is.]
 
 ---
 
@@ -45,11 +47,11 @@
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| **Languages** | [Python, JavaScript, HTML, CSS] |
+| **Frameworks** | [Streamlit] |
+| **IBM Technologies** | [watsonx.ai, IBM Bob, IBM Granite] |
+| **Databases** | [SQLite] |
+| **Other** | [GitHub Actions, NLP, Machine Learning, REST API] |
 
 ---
 
