@@ -1,26 +1,27 @@
 # Screenshots
 
-Place your application screenshots in this folder.
+Replace these placeholder instructions with actual application screenshots before submission.
 
-## Naming Convention
+## Required Screenshots
 
-Name your screenshots sequentially so they appear in logical order:
+### screenshot-1.png
+**Topic:** Home page
+**What to show:** The PharmaGuard AI home page with both feature cards visible (Safety Signal Detection and Submission Readiness Checker).
+**How to capture:** Open http://localhost:8501 and take a screenshot of the full page.
 
-  01-landing-page.png       ← First thing a user sees
-  02-main-feature.png       ← Your primary feature in action
-  03-output-or-results.png  ← The result / value delivered
-  04-additional-feature.png ← Any other notable screen
+### screenshot-2.png
+**Topic:** Safety Signal Detection results
+**What to show:** The ranked PRR results table with flagged signals highlighted, and at least one signal detail expander open showing the 2×2 contingency table.
+**How to capture:** Load sample data, click Calculate PRR, then take a screenshot.
 
-## Requirements
+### screenshot-3.png
+**Topic:** Submission Readiness module scores
+**What to show:** The module-wise score metrics, bar chart, and the detailed requirements table with green (found) and red (not detected) rows.
+**How to capture:** Load sample dossier, click Check Submission Readiness, then take a screenshot.
 
-- Minimum: 3 screenshots
-- Format: PNG or JPG
-- Show the application running with real (or realistic mock) data
-- Avoid screenshots of empty states or placeholder data
-- Captions are not required but appreciated
-
-## Tips
-
-- Use a consistent browser window size across all screenshots
-- Highlight key UI elements with arrows/circles if helpful (use any image editor)
-- Include a screenshot showing IBM technology integration if applicable
+## Instructions
+1. Run the application: `cd src && streamlit run app.py`
+2. Open http://localhost:8501 in your browser
+3. Navigate through each page as described above
+4. Take screenshots and save them as screenshot-1.png, screenshot-2.png, screenshot-3.png
+5. Replace this README.md content with a brief caption for each screenshot
