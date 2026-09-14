@@ -11,7 +11,7 @@
 | **Team Name** | [Code stromers] |
 | **Track** | [AI / DevOps / Sustainability / Open] |
 | **Team Lead** | [Gracy] — [gracyborsania@gmail.com] |
-| **Members** | [vishva], [Siya], [Prushti] |
+| **Members** | [Vishva], [Siya], [Prushti] |
 
 ---
 
@@ -110,14 +110,14 @@ cp .env.example .env
 
 > Be honest — judges appreciate transparency over overclaiming.
 
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
+- [Limitation 1: "The accuracy of results depends on the quality and completeness of the available data."]
+- [Limitation 2: "AI-generated results require review by qualified medical or regulatory professionals before making final decisions."]
+- [Limitation 3: "The system may not cover every drug safety scenario or regulatory requirement."]
 
 ---
 
 ## 🏅 What We're Most Proud Of
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
+[We are most proud of combining AI-powered drug safety signal detection with regulatory submission readiness checking in one solution. It helps identify potential safety concerns early while reducing manual effort and improving the completeness of regulatory submissions.]
 
 ---
