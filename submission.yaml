@@ -7,17 +7,17 @@ team:
   name: "Code Stromers"
   track: "AI"
   lead:
-    name: "FILL_IN_LEAD_NAME"
-    email: "FILL_IN_LEAD_EMAIL"
+    name: "Gracy Borsania"
+    email: "gracyborsania@gmail.com"
   members:
-    - name: "FILL_IN_MEMBER_1"
-      role: "FILL_IN_ROLE"
-    - name: "FILL_IN_MEMBER_2"
-      role: "FILL_IN_ROLE"
-    - name: "FILL_IN_MEMBER_3"
-      role: "FILL_IN_ROLE"
-    - name: "FILL_IN_MEMBER_4"
-      role: "FILL_IN_ROLE"
+    - name: "Gracy Borsania"
+      role: "Developer"
+    - name: "Vishva Kotaiya"
+      role: "Developer"
+    - name: "Siya Dholariya"
+      role: "Developer"
+    - name: "Prushti Bhadja"
+      role: "Developer"
 
 submission:
   title: "PharmaGuard AI"
@@ -53,7 +53,7 @@ repository:
   url: "https://github.com/gracyborsania-netizen/bob-ai-hackathon--code-stromers-"
 
 demo:
-  video_url: "NOT AVAILABLE YET"
+  video_url: "https://youtu.be/64S7NWLnfwk?si=CXtXZ1gIbhi8n5-9"
   live_url: "NOT DEPLOYED"
 
 disclaimers:
