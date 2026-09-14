@@ -1,4 +1,4 @@
-NOT DEPLOYED
+https://t74jltdqwfyagxbe3zv8tw.streamlit.app/
 
 A live demo URL will be added here if/when the application is deployed.
 Deployment options:
