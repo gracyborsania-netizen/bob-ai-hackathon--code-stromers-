@@ -1,0 +1,9 @@
+NOT DEPLOYED
+
+A live demo URL will be added here if/when the application is deployed.
+Deployment options:
+- Streamlit Community Cloud: https://streamlit.io/cloud
+- IBM Code Engine
+- Any cloud platform supporting Python/Streamlit
+
+To run locally: cd src && streamlit run app.py
