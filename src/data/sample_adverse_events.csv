@@ -1,0 +1,89 @@
+drug,event,count
+Atorvastatin,Myalgia,42
+Atorvastatin,Headache,18
+Atorvastatin,Nausea,12
+Atorvastatin,Rhabdomyolysis,8
+Atorvastatin,Liver Enzyme Elevation,15
+Atorvastatin,Dizziness,9
+Atorvastatin,Fatigue,11
+Atorvastatin,Insomnia,5
+Metformin,Nausea,38
+Metformin,Diarrhea,45
+Metformin,Abdominal Pain,22
+Metformin,Lactic Acidosis,3
+Metformin,Headache,14
+Metformin,Fatigue,10
+Metformin,Dizziness,7
+Metformin,Vomiting,16
+Amoxicillin,Rash,28
+Amoxicillin,Diarrhea,19
+Amoxicillin,Nausea,14
+Amoxicillin,Anaphylaxis,4
+Amoxicillin,Headache,8
+Amoxicillin,Vomiting,11
+Amoxicillin,Urticaria,17
+Amoxicillin,Abdominal Pain,9
+Lisinopril,Dry Cough,56
+Lisinopril,Headache,21
+Lisinopril,Dizziness,18
+Lisinopril,Hyperkalemia,7
+Lisinopril,Fatigue,13
+Lisinopril,Nausea,9
+Lisinopril,Angioedema,5
+Lisinopril,Rash,6
+Sertraline,Nausea,33
+Sertraline,Insomnia,29
+Sertraline,Headache,24
+Sertraline,Sexual Dysfunction,19
+Sertraline,Dizziness,15
+Sertraline,Fatigue,18
+Sertraline,Diarrhea,13
+Sertraline,Dry Mouth,22
+Omeprazole,Headache,19
+Omeprazole,Nausea,14
+Omeprazole,Diarrhea,17
+Omeprazole,Abdominal Pain,11
+Omeprazole,Dizziness,8
+Omeprazole,Fatigue,9
+Omeprazole,Hypomagnesemia,6
+Omeprazole,C. difficile Infection,4
+Amlodipine,Peripheral Edema,48
+Amlodipine,Headache,22
+Amlodipine,Dizziness,16
+Amlodipine,Flushing,20
+Amlodipine,Fatigue,12
+Amlodipine,Nausea,9
+Amlodipine,Palpitations,7
+Amlodipine,Rash,5
+Warfarin,Bleeding,35
+Warfarin,Nausea,11
+Warfarin,Bruising,27
+Warfarin,Headache,14
+Warfarin,Fatigue,9
+Warfarin,Dizziness,8
+Warfarin,Alopecia,6
+Warfarin,Rash,7
+Metoprolol,Fatigue,31
+Metoprolol,Dizziness,24
+Metoprolol,Bradycardia,18
+Metoprolol,Headache,17
+Metoprolol,Nausea,12
+Metoprolol,Cold Extremities,14
+Metoprolol,Insomnia,9
+Metoprolol,Depression,8
+Ibuprofen,Nausea,29
+Ibuprofen,Abdominal Pain,25
+Ibuprofen,Headache,18
+Ibuprofen,Dizziness,13
+Ibuprofen,GI Bleeding,9
+Ibuprofen,Rash,8
+Ibuprofen,Renal Impairment,6
+Ibuprofen,Hypertension,11
+Prednisone,Insomnia,24
+Prednisone,Weight Gain,31
+Prednisone,Hyperglycemia,19
+Prednisone,Mood Changes,16
+Prednisone,Headache,13
+Prednisone,Nausea,10
+Prednisone,Osteoporosis,8
+Prednisone,Hypertension,14

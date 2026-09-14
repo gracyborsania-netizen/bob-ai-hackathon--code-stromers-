@@ -1,71 +1,62 @@
-# =============================================================================
-# HACKATHON SUBMISSION METADATA
-# =============================================================================
-# Instructions:
-#   - Fill in ALL required fields (marked with # REQUIRED)
-#   - Optional fields can be left as empty strings ""
-#   - Do NOT rename this file — the evaluation pipeline reads it by name
-#   - Use double quotes around all string values
-# =============================================================================
+# IBM BoB AI Innovation Hackathon 2026 — Submission
+
+project:
+  name: "PharmaGuard AI"
+  problem: "P2 – Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
+  description: >
+    PharmaGuard AI is an AI-assisted screening prototype that addresses drug safety
+    signal detection using the Proportional Reporting Ratio (PRR) method and
+    regulatory submission readiness checking using a CTD-inspired checklist covering
+    ICH CTD Modules 1–5. The system includes an IBM Bob integration adapter for
+    optional AI-assisted plain-language explanations and gap summaries.
 
 team:
-  name: "Code Stomers"                             # REQUIRED — e.g., "Orion Squad"
-  track: "AI"                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
-  lead:
-    name: "Gracy Borsania"                           # REQUIRED — e.g., "Alice Chen"
-    email: "gracyborsania@gmail.com"                          # REQUIRED — e.g., "alice.chen@ibm.com"
+  name: "FILL_IN_TEAM_NAME"
   members:
-    - name: "Vishva Kotadiya"                         # REQUIRED — Team member 1
-      email: "vishvakotadiya25@gmail.com"
-    - name: "Siya Dholariya"                         # Add more members by copying the two lines above
-      email: "skmdmjd08@gmail.com"
-    - name: "Prushti Bhadja"
-      email: "prushtibhadja@gmail.com"
+    - name: "FILL_IN_MEMBER_1"
+      role: "FILL_IN_ROLE"
+    - name: "FILL_IN_MEMBER_2"
+      role: "FILL_IN_ROLE"
+    - name: "FILL_IN_MEMBER_3"
+      role: "FILL_IN_ROLE"
+    - name: "FILL_IN_MEMBER_4"
+      role: "FILL_IN_ROLE"
 
-submission:
-  title: "Pharmaguard AI"                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+repository:
+  url: "FILL_IN_GITHUB_REPOSITORY_URL"
 
-  problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-     Detect potential drug safety signals from large amounts of pharmaceutical safety data, reducing the time and effort required for manual analysis.
-     Ensure regulatory submissions are complete and meet required standards before submission, reducing errors and improving submission readiness.
+demo:
+  video_url: "NOT AVAILABLE YET"
+  live_url: "NOT DEPLOYED"
 
-  solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-     An AI-powered system that analyzes drug safety data to detect potential safety signals and highlights possible risks.
-     It also checks regulatory submission documents for completeness, identifies missing or incorrect information, and provides a readiness score before submission.
+key_features:
+  - "PRR-based safety signal detection with configurable threshold"
+  - "Automatic signal ranking (highest PRR first) and flagging"
+  - "Full 2x2 contingency table display (a, b, c, d values)"
+  - "CTD-inspired submission readiness checking across Modules 1-5"
+  - "Module-wise completeness scores with visual bar chart"
+  - "Missing requirement detection via keyword matching"
+  - "Downloadable gap report (TXT and CSV)"
+  - "Optional IBM Bob AI-assisted signal explanations"
+  - "Optional IBM Bob AI-assisted gap summaries"
+  - "Synthetic demo data (sample CSV and sample dossier)"
+  - "Works fully without IBM Bob credentials (graceful fallback)"
 
+tech_stack:
+  languages:
+    - Python
+  frameworks:
+    - Streamlit
+    - Pandas
+    - NumPy
+    - python-dotenv
+  ibm_technologies:
+    - "IBM Bob / IBM Bob integration adapter (configurable via environment variables)"
+  ci_cd:
+    - GitHub Actions
 
-  key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - "AI Safety Signal Detection – Detects potential drug safety risks from available data."                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - "Risk Alerts – Highlights important safety concerns for review."
-    - "Submission Readiness Check – Checks whether required regulatory information is complete."
-    - "Missing Information Detection – Identifies incomplete or missing details."                               # optional 4th
-    - "Readiness Score – Provides a score indicating how ready the submission is."                               # optional 5th
-
-  tech_stack:
-    languages: ["Python", "JavaScript", "HTML", "CSS"]                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: ["Streamlit"]                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: ["wtsonx.ai", "IBM Bob, "IBM Granite"]               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: ["SQL Lite"]                      # e.g., ["PostgreSQL", "Redis"]
-    other: ["Github Actions", "NLP", "Machine Learning", "REST API"]                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
-
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    We are most proud of combining AI-powered drug safety signal detection with regulatory submission readiness checking in one solution.
-    It helps identify potential safety concerns early while reducing manual effort and improving the completeness of regulatory submissions.
-
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-   1. The accuracy of results depends on the quality and completeness of the available data.
-   2. AI-generated results require review by qualified medical or regulatory professionals before making final decisions.
-   3. The system may not cover every drug safety scenario or regulatory requirement.
-
-# =============================================================================
-# ARTIFACT LOCATIONS
-# These paths are relative to the repo root. Only change if you moved files.
-# =============================================================================
-artifacts:
-  source_code: "src/"
-  setup_guide: "docs/setup-guide.md"
-  architecture_doc: "docs/architecture.md"
-  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
-  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
-  screenshots: "http://localhost:8501"
-  presentation: "presentation/"
+disclaimers:
+  - "All data is synthetic and does not represent real patients or products"
+  - "PRR is a disproportionality screening statistic — does not prove causality"
+  - "CTD checklist is a configurable prototype — not a legal regulatory certification"
+  - "This system does not make clinical, causal, or regulatory decisions"

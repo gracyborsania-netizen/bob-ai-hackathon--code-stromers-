@@ -1,45 +1,63 @@
-# 🚀 [PHARMAGUARD AI]
+# 💊 PharmaGuard AI
 
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
+> **AI-Assisted Drug Safety Signal Detection & Regulatory Submission Readiness**
+> IBM BoB AI Innovation Hackathon 2026 — Problem P2
 
 ---
 
 ## 👥 Team
 
-| Field | Value |
+| Field | Details |
 |---|---|
-| **Team Name** | [Code stromers] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Gracy] — [gracyborsania@gmail.com] |
-| **Members** | [Vishva], [Siya], [Prushti] |
+| **Team Name** | *(Fill in your team name)* |
+| **Member 1** | *(Name — Role)* |
+| **Member 2** | *(Name — Role)* |
+| **Member 3** | *(Name — Role)* |
+| **Member 4** | *(Name — Role)* |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem'
-> [Detect potential drug safety signals from large amounts of pharmaceutical safety data, reducing the time and effort required for manual analysis.
-Ensure regulatory submissions are complete and meet required standards before submission, reducing errors and improving submission readiness.]
+**P2 — Drug Safety Signal Detector & Regulatory Submission Readiness Checker**
+
+The pharmaceutical industry faces two critical and time-consuming challenges:
+
+1. **Drug Safety Signal Detection** — Spontaneous adverse event reporting systems generate enormous volumes of drug–event pairs. Pharmacovigilance teams must identify potential safety signals — combinations of drugs and adverse events that occur more frequently than expected by chance — from hundreds of thousands of reports. Manual review is slow, error-prone, and does not scale.
+
+2. **Regulatory Submission Readiness** — Before a new drug application can be submitted to a regulatory authority, the dossier must meet complex standards (such as the ICH Common Technical Document format). Checking completeness manually across Modules 1–5 is labour-intensive, and gaps discovered late in the process cause costly delays.
+
+Both problems benefit from AI-assisted automation, transparency, and explainability.
 
 ---
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
+**PharmaGuard AI** is an AI-assisted screening prototype that addresses both challenges in a single unified web dashboard:
 
-[An AI-powered system that analyzes drug safety data to detect potential safety signals and highlights possible risks.
-It also checks regulatory submission documents for completeness, identifies missing or incorrect information, and provides a readiness score before submission.]
+- **Safety Signal Detection** — Upload adverse event data (CSV) and automatically compute the Proportional Reporting Ratio (PRR) for every drug–event pair. Signals above the configurable threshold (default PRR ≥ 2.0) are ranked and flagged. Full 2×2 contingency tables are shown for transparency.
 
+- **Submission Readiness Checker** — Paste or upload a dossier text and evaluate it against a CTD-inspired checklist covering ICH CTD Modules 1–5. View module-wise scores, detected and missing requirements, and download a gap report.
+
+- **IBM Bob AI Assistance** — When configured, IBM Bob provides plain-language explanations for safety signals and concise gap summaries for submission readiness results.
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [AI Safety Signal Detection – Detects potential drug safety risks from available data.]
-- **Feature 2:** [Risk Alerts – Highlights important safety concerns for review.]
-- **Feature 3:** [Submission Readiness Check – Checks whether required regulatory information is complete.]
-- **Feature 4:** [Missing Information Detection – Identifies incomplete or missing details.]
-- **Feature 5:** [Readiness Score – Provides a score indicating how ready the submission is.]
+- ✅ PRR-based safety signal screening with configurable threshold
+- ✅ Automatic signal ranking (highest PRR first)
+- ✅ Potential signal flagging with full 2×2 contingency table display
+- ✅ CTD-inspired readiness checking across Modules 1–5
+- ✅ Module-wise completeness scores with visual bar chart
+- ✅ Missing requirement detection with keyword matching
+- ✅ Gap report generation and download (TXT + CSV)
+- ✅ Optional IBM Bob-assisted plain-language signal explanations
+- ✅ Optional IBM Bob-assisted submission gap summaries
+- ✅ Synthetic demo data (sample CSV + sample dossier)
+- ✅ Works fully offline without IBM Bob credentials
+- ✅ Friendly validation messages and error handling
+- ✅ Download buttons for all results
 
 ---
 
@@ -47,77 +65,150 @@ It also checks regulatory submission documents for completeness, identifies miss
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [Python, JavaScript, HTML, CSS] |
-| **Frameworks** | [Streamlit] |
-| **IBM Technologies** | [watsonx.ai, IBM Bob, IBM Granite] |
-| **Databases** | [SQLite] |
-| **Other** | [GitHub Actions, NLP, Machine Learning, REST API] |
-
----
-
-## 📁 Repository Structure
-
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
+| **Languages** | Python 3.9+ |
+| **Frameworks** | Streamlit, Pandas, NumPy |
+| **IBM Technologies** | IBM Bob / IBM Bob integration adapter (configurable) |
+| **AI Integration** | REST-based adapter for IBM Bob / watsonx (BOB_API_URL, BOB_API_KEY, BOB_MODEL) |
+| **Databases** | CSV-based storage — no database required |
+| **Other** | Git, GitHub Actions, YAML, python-dotenv |
 
 ---
 
 ## ⚡ How to Run
 
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
+### 1. Clone the repository
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
-
-# 2. Install dependencies
-[your install command here]
-
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
-
-# 4. Run the project
-[your run command here]
+git clone <repository-url>
+cd <repository-name>
 ```
+
+### 2. Navigate to the `src` directory
+
+```bash
+cd src
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+```bash
+# Windows
+copy .env.example .env
+
+# macOS / Linux
+cp .env.example .env
+```
+
+Open `.env` and fill in your IBM Bob credentials (optional — the app works without them):
+
+```
+BOB_API_URL=https://your-bob-api-endpoint
+BOB_API_KEY=your-api-key-here
+BOB_MODEL=ibm/granite-13b-instruct-v2
+```
+
+### 5. Run the application
+
+```bash
+streamlit run app.py
+```
+
+The application will open at **http://localhost:8501**
 
 ---
 
-## 🖥️ Demo
+## 🎬 Demo
 
-| Artifact | Link |
+| Resource | Location |
 |---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
+| Demo Video | See [`demo/demo-video-link.txt`](demo/demo-video-link.txt) |
+| Live Demo URL | See [`demo/live-demo-url.txt`](demo/live-demo-url.txt) |
+| Screenshots | See [`demo/screenshots/`](demo/screenshots/) |
+
+---
+
+## 🧪 Running Tests
+
+From the repository root:
+
+```bash
+pytest tests/ -v
+```
+
+Tests cover:
+- PRR calculation correctness
+- CSV validation
+- CTD checklist scoring
+- Missing requirement detection
+- Edge cases (zero division, empty input, custom thresholds)
 
 ---
 
 ## ⚠️ Known Limitations
 
-> Be honest — judges appreciate transparency over overclaiming.
+- All data used is **synthetic** and does not represent real patients, products, or companies
+- PRR is a **disproportionality screening statistic** — it does **NOT** prove causality
+- The CTD checklist uses **keyword matching** — it is a configurable prototype, not a legal standard
+- IBM Bob AI assistance depends on valid configuration in the `.env` file
+- This prototype does **not** make clinical, causal, or regulatory decisions
+- Always consult qualified pharmacovigilance and regulatory professionals for real decisions
 
-- [Limitation 1: "The accuracy of results depends on the quality and completeness of the available data."]
-- [Limitation 2: "AI-generated results require review by qualified medical or regulatory professionals before making final decisions."]
-- [Limitation 3: "The system may not cover every drug safety scenario or regulatory requirement."]
+---
+
+## 🏆 What We're Most Proud Of
+
+PharmaGuard AI combines two distinct but complementary pharmaceutical challenges — **quantitative drug safety screening** and **structured regulatory readiness assessment** — into a single, transparent, and explainable AI-assisted dashboard.
+
+The PRR calculation is fully transparent: every 2×2 contingency table value (a, b, c, d) is shown alongside the computed ratio, making the screening logic auditable rather than a black box. The CTD checklist uses keyword matching that is easy to configure and extend for different jurisdictions.
+
+By integrating IBM Bob AI explanations as an optional layer on top of quantitative results, PharmaGuard AI demonstrates how large language models can add value in regulated domains — not by replacing expert judgment, but by making outputs more accessible and actionable for pharmacovigilance and regulatory affairs teams.
 
 ---
 
-## 🏅 What We're Most Proud Of
+## 📁 Project Structure
 
-[We are most proud of combining AI-powered drug safety signal detection with regulatory submission readiness checking in one solution. It helps identify potential safety concerns early while reducing manual effort and improving the completeness of regulatory submissions.]
+```
+PharmaGuard-AI/
+├── src/
+│   ├── app.py                    # Main Streamlit dashboard
+│   ├── safety_signal.py          # PRR calculation engine
+│   ├── ctd_checker.py            # CTD-inspired readiness checker
+│   ├── bob_adapter.py            # IBM Bob integration adapter
+│   ├── requirements.txt          # Python dependencies
+│   ├── .env.example              # Environment variable template
+│   ├── README.md                 # Source code documentation
+│   └── data/
+│       ├── sample_adverse_events.csv   # Synthetic AE data
+│       └── sample_dossier.txt          # Synthetic CTD dossier
+├── tests/
+│   ├── test_safety_signal.py     # PRR calculation tests
+│   └── test_ctd_checker.py       # CTD checker tests
+├── docs/
+│   ├── problem-statement.md      # Problem P2 analysis
+│   ├── solution-overview.md      # Solution description
+│   ├── architecture.md           # Technical architecture
+│   └── setup-guide.md            # Installation & demo guide
+├── demo/
+│   ├── README.md                 # Demo instructions
+│   ├── demo-video-link.txt       # Video link (to be filled)
+│   ├── live-demo-url.txt         # Live URL (to be filled)
+│   └── screenshots/              # Application screenshots
+├── presentation/
+│   └── slides.pptx               # Hackathon presentation
+├── README.md                     # This file
+├── CONTRIBUTING.md               # Contribution guidelines
+├── .gitignore                    # Git ignore rules
+└── submission.yaml               # Official submission metadata
+```
 
 ---
+
+## 📄 License
+
+This project was created for the IBM BoB AI Innovation Hackathon 2026.

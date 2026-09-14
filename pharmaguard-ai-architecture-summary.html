@@ -1,0 +1,292 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PharmaGuard AI — Architecture Summary</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #1f2328;
+    background: #ffffff;
+    padding: 2rem 1rem 3rem;
+  }
+  .page { max-width: 760px; margin: 0 auto; }
+
+  h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.05rem; font-weight: 700; margin: 2rem 0 0.6rem; color: #1f2328; }
+  h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.3rem; }
+
+  .subtitle { color: #57606a; font-size: 0.88rem; margin-bottom: 2rem; }
+  .badge {
+    display: inline-block;
+    background: #3b82d4;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+  }
+  .badge.purple { background: #7c5cd8; }
+  .badge.green  { background: #1a7f4b; }
+
+  /* Architecture diagram */
+  .arch {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #f7f8fa;
+    padding: 1.4rem 1.6rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .arch-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .arch-row:last-child { margin-bottom: 0; }
+  .box {
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0.55rem 0.85rem;
+    flex: 1;
+  }
+  .box.accent  { border-color: #3b82d4; border-left: 4px solid #3b82d4; }
+  .box.purple  { border-color: #7c5cd8; border-left: 4px solid #7c5cd8; }
+  .box.green   { border-color: #1a7f4b; border-left: 4px solid #1a7f4b; }
+  .box.muted   { border-color: #d0d7de; border-left: 4px solid #d0d7de; background: #f7f8fa; }
+  .box-title   { font-weight: 700; font-size: 0.88rem; }
+  .box-sub     { font-size: 0.78rem; color: #57606a; }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #57606a;
+    font-size: 1.1rem;
+    min-width: 1.6rem;
+    padding: 0 0.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Module cards */
+  .cards { display: flex; flex-direction: column; gap: 1rem; margin: 0.8rem 0 1.5rem; }
+  .card {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+  }
+  .card-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .filename { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.85rem; font-weight: 700; color: #3b82d4; }
+  .card p  { font-size: 0.88rem; color: #1f2328; margin-bottom: 0.4rem; }
+  .card p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0.8rem 0 1.5rem; font-size: 0.85rem; }
+  th { text-align: left; font-weight: 600; padding: 0.45rem 0.7rem; border-bottom: 2px solid #e5e7eb; background: #f7f8fa; }
+  td { padding: 0.4rem 0.7rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  .flow-label { font-size: 0.78rem; color: #57606a; font-style: italic; margin-top: -0.8rem; margin-bottom: 1rem; text-align: center; }
+
+  code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.82rem; background: #f0f2f5; padding: 0.1rem 0.35rem; border-radius: 3px; }
+
+  ul { padding-left: 1.3rem; margin: 0.3rem 0; }
+  li { font-size: 0.88rem; margin-bottom: 0.2rem; }
+
+  .divider { border: none; border-top: 1px solid #e5e7eb; margin: 2rem 0; }
+
+  .footer {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 3rem;
+    padding-top: 0.8rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #57606a;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>PharmaGuard AI <span class="badge">Hackathon</span></h1>
+  <p class="subtitle">Codebase Architecture Summary · IBM Bob AI Innovation Hackathon</p>
+
+  
+  <h2>High-Level Data Flow</h2>
+
+  <div class="arch">
+    <div class="arch-row">
+      <div class="box accent" style="flex:2">
+        <div class="box-title">src/app.py</div>
+        <div class="box-sub">Streamlit front-end · two workflow tabs</div>
+      </div>
+    </div>
+    <div class="arch-row">
+      <div class="arrow">↓</div>
+      <div class="arrow">↓</div>
+      <div class="arrow">↓</div>
+    </div>
+    <div class="arch-row">
+      <div class="box purple">
+        <div class="box-title">src/safety_signal.py</div>
+        <div class="box-sub">PRR computation engine</div>
+      </div>
+      <div class="arrow" style="visibility:hidden">→</div>
+      <div class="box green">
+        <div class="box-title">src/ctd_checker.py</div>
+        <div class="box-sub">ICH CTD readiness checker</div>
+      </div>
+    </div>
+    <div class="arch-row">
+      <div class="arrow" style="flex:1;justify-content:center">↓</div>
+      <div class="arrow" style="visibility:hidden;flex:0.1">·</div>
+      <div class="arrow" style="flex:1;justify-content:center">↓</div>
+    </div>
+    <div class="arch-row">
+      <div class="box muted" style="flex:2">
+        <div class="box-title">src/bob_adapter.py</div>
+        <div class="box-sub">IBM Granite / watsonx AI calls · graceful fallback when SDK absent</div>
+      </div>
+    </div>
+  </div>
+  <p class="flow-label">Both core modules call bob_adapter.py independently; app.py orchestrates everything.</p>
+
+  
+  <h2>Module Descriptions</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="filename">src/app.py</span>
+        <span class="badge">Entry point</span>
+      </div>
+      <p>The Streamlit UI layer. Renders two tabs — <strong>Safety Signal Detector</strong> and <strong>Regulatory Submission Checker</strong> — and has no business logic of its own. Responsibilities:</p>
+      <ul>
+        <li>File upload &amp; input parsing (CSV, JSON)</li>
+        <li>Column / schema validation with actionable error messages</li>
+        <li>Delegating computation to <code>safety_signal.py</code> and <code>ctd_checker.py</code></li>
+        <li>Requesting AI explanations from <code>bob_adapter.py</code></li>
+        <li>Rendering metrics, tables, and AI summaries</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="filename">src/safety_signal.py</span>
+        <span class="badge purple">Core logic</span>
+      </div>
+      <p>Pure-Python PRR computation. No I/O, no UI imports — easily unit-testable. Key public API:</p>
+      <ul>
+        <li><code>AdverseEventRecord</code> — dataclass representing one reporting-dataset row</li>
+        <li><code>PRRResult</code> — dataclass holding the four contingency cells, PRR value, and signal flag</li>
+        <li><code>compute_prr(records, prr_threshold, min_count)</code> — aggregates counts, applies the Evans et al. (2001) formula, and returns results sorted by PRR descending</li>
+      </ul>
+      <p><strong>Signal threshold:</strong> PRR ≥ 2.0 <em>and</em> cell-a ≥ 3 co-reports (configurable). Division-by-zero (event exclusive to one drug) yields <code>PRR = ∞</code> — still flagged when count criterion is met.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="filename">src/ctd_checker.py</span>
+        <span class="badge green">Core logic</span>
+      </div>
+      <p>Validates a dossier dictionary against the ICH Common Technical Document checklist (Modules 2–5). Key public API:</p>
+      <ul>
+        <li><code>ICH_CTD_CHECKLIST</code> — dict of 14 required section IDs → labels</li>
+        <li><code>SectionStatus</code> — per-section readiness (present, non-empty, notes)</li>
+        <li><code>CTDReport</code> — aggregated report with <code>completeness_pct</code>, <code>missing_sections</code>, <code>is_submission_ready</code></li>
+        <li><code>check_dossier(dossier, checklist)</code> — validates and returns a <code>CTDReport</code></li>
+      </ul>
+      <p>A section passes when its value is <em>present</em> (key exists) <em>and</em> truthy (non-empty string/dict/list). Accepts an optional custom checklist for jurisdiction-specific requirements.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="filename">src/bob_adapter.py</span>
+        <span class="badge">AI layer</span>
+      </div>
+      <p>Thin wrapper around the IBM watsonx AI SDK (<code>ibm-watsonx-ai</code>). Isolates all AI-platform concerns so the core modules remain dependency-free. Key behaviours:</p>
+      <ul>
+        <li>Attempts to import the SDK at module load; sets <code>_SDK_AVAILABLE = False</code> silently if absent</li>
+        <li>Reads <code>WATSONX_API_KEY</code>, <code>WATSONX_PROJECT_ID</code>, <code>WATSONX_URL</code> from environment variables</li>
+        <li><code>explain_signal(drug, event, prr)</code> — calls IBM Granite to produce a plain-language clinical summary for a flagged signal</li>
+        <li><code>suggest_ctd_fix(section_id, label)</code> — returns actionable ICH M4 guidance for a missing CTD section</li>
+        <li>Falls back to a static template string on any SDK, credential, or network error — the UI always has something to show</li>
+      </ul>
+    </div>
+
+  </div>
+
+  
+  <h2>Inter-Module Dependency Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>Imports from</th>
+        <th>Imported by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>app.py</code></td>
+        <td><code>safety_signal</code>, <code>ctd_checker</code>, <code>bob_adapter</code>, <code>streamlit</code>, <code>pandas</code></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><code>safety_signal.py</code></td>
+        <td><code>math</code>, <code>dataclasses</code>, <code>collections</code> (stdlib only)</td>
+        <td><code>app.py</code>, <code>test_safety_signal.py</code></td>
+      </tr>
+      <tr>
+        <td><code>ctd_checker.py</code></td>
+        <td><code>dataclasses</code> (stdlib only)</td>
+        <td><code>app.py</code>, <code>test_ctd_checker.py</code></td>
+      </tr>
+      <tr>
+        <td><code>bob_adapter.py</code></td>
+        <td><code>os</code> (stdlib) + optional <code>ibm-watsonx-ai</code></td>
+        <td><code>app.py</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <h2>Test Suite Coverage</h2>
+  <table>
+    <thead>
+      <tr><th>Test file</th><th>Tests</th><th>Edge cases covered</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>test_safety_signal.py</code></td>
+        <td>9</td>
+        <td>Empty input, no signals, signal detection, count below min, count aggregation, infinite PRR, single record, custom threshold, sort order</td>
+      </tr>
+      <tr>
+        <td><code>test_ctd_checker.py</code></td>
+        <td>12</td>
+        <td>Non-dict / None input, empty dossier, fully complete, partial dossier, empty string/dict values, notes field, completeness %, custom checklist, full ICH smoke test, whitespace-only value</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <h2>Design Principles</h2>
+  <ul>
+    <li><strong>Separation of concerns</strong> — UI, computation, and AI are in separate modules with no circular imports.</li>
+    <li><strong>Graceful degradation</strong> — the app runs fully offline; <code>bob_adapter.py</code> falls back to static text when the IBM SDK or credentials are unavailable.</li>
+    <li><strong>Testability</strong> — <code>safety_signal.py</code> and <code>ctd_checker.py</code> have zero UI or network dependencies, making them trivially unit-testable.</li>
+    <li><strong>Configurability</strong> — PRR threshold, minimum count, and CTD checklist are all runtime parameters, not hard-coded constants.</li>
+  </ul>
+
+  <div class="footer">Made with IBM Bob</div>
+</div>
+</body>
+</html>
