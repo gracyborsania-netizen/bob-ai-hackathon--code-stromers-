@@ -9,11 +9,11 @@
 
 | Field | Details |
 |---|---|
-| **Team Name** | *(Fill in your team name)* |
-| **Member 1** | *(Name — Role)* |
-| **Member 2** | *(Name — Role)* |
-| **Member 3** | *(Name — Role)* |
-| **Member 4** | *(Name — Role)* |
+| **Team Name** | *code stromers* |
+| **Member 1** | *Gracy* |
+| **Member 2** | *siya* |
+| **Member 3** | *Vishva* |
+| **Member 4** | *Prushti* |
 
 ---
 
