@@ -1,17 +1,14 @@
 # IBM BoB AI Innovation Hackathon 2026 — Submission
-
-project:
-  name: "PharmaGuard AI"
-  problem: "P2 – Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
-  description: >
-    PharmaGuard AI is an AI-assisted screening prototype that addresses drug safety
-    signal detection using the Proportional Reporting Ratio (PRR) method and
-    regulatory submission readiness checking using a CTD-inspired checklist covering
-    ICH CTD Modules 1–5. The system includes an IBM Bob integration adapter for
-    optional AI-assisted plain-language explanations and gap summaries.
+# ─────────────────────────────────────────────────
+# Fill in every field marked FILL_IN before final submission.
+# Do NOT change field names — they are validated by the GitHub Actions workflow.
 
 team:
-  name: "FILL_IN_TEAM_NAME"
+  name: "Code Stromers"
+  track: "AI"
+  lead:
+    name: "FILL_IN_LEAD_NAME"
+    email: "FILL_IN_LEAD_EMAIL"
   members:
     - name: "FILL_IN_MEMBER_1"
       role: "FILL_IN_ROLE"
@@ -22,38 +19,42 @@ team:
     - name: "FILL_IN_MEMBER_4"
       role: "FILL_IN_ROLE"
 
+submission:
+  title: "PharmaGuard AI"
+  problem_statement: "P2 – Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
+  solution_summary: >
+    PharmaGuard AI is an AI-assisted screening prototype that addresses drug safety
+    signal detection using the Proportional Reporting Ratio (PRR) method and
+    regulatory submission readiness checking using a CTD-inspired checklist covering
+    ICH CTD Modules 1–5. The system includes an IBM Bob integration adapter for
+    optional AI-assisted plain-language explanations and gap summaries.
+    All data is synthetic. The tool does not make clinical or regulatory decisions.
+  key_features:
+    - "PRR-based safety signal detection with configurable threshold"
+    - "Automatic signal ranking (highest PRR first) and flagging"
+    - "Full 2x2 contingency table display (a, b, c, d values)"
+    - "CTD-inspired submission readiness checking across Modules 1-5"
+    - "Module-wise completeness scores with visual bar chart"
+    - "Missing requirement detection via keyword matching"
+    - "Downloadable gap report (TXT and CSV)"
+    - "Optional IBM Bob AI-assisted signal explanations"
+    - "Optional IBM Bob AI-assisted gap summaries"
+    - "Synthetic demo data — works fully without IBM Bob credentials"
+  tech_stack:
+    - "Python"
+    - "Streamlit"
+    - "Pandas"
+    - "NumPy"
+    - "python-dotenv"
+    - "IBM Bob integration adapter"
+    - "GitHub Actions"
+
 repository:
-  url: "FILL_IN_GITHUB_REPOSITORY_URL"
+  url: "https://github.com/gracyborsania-netizen/bob-ai-hackathon--code-stromers-"
 
 demo:
   video_url: "NOT AVAILABLE YET"
   live_url: "NOT DEPLOYED"
-
-key_features:
-  - "PRR-based safety signal detection with configurable threshold"
-  - "Automatic signal ranking (highest PRR first) and flagging"
-  - "Full 2x2 contingency table display (a, b, c, d values)"
-  - "CTD-inspired submission readiness checking across Modules 1-5"
-  - "Module-wise completeness scores with visual bar chart"
-  - "Missing requirement detection via keyword matching"
-  - "Downloadable gap report (TXT and CSV)"
-  - "Optional IBM Bob AI-assisted signal explanations"
-  - "Optional IBM Bob AI-assisted gap summaries"
-  - "Synthetic demo data (sample CSV and sample dossier)"
-  - "Works fully without IBM Bob credentials (graceful fallback)"
-
-tech_stack:
-  languages:
-    - Python
-  frameworks:
-    - Streamlit
-    - Pandas
-    - NumPy
-    - python-dotenv
-  ibm_technologies:
-    - "IBM Bob / IBM Bob integration adapter (configurable via environment variables)"
-  ci_cd:
-    - GitHub Actions
 
 disclaimers:
   - "All data is synthetic and does not represent real patients or products"
