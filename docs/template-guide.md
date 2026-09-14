@@ -80,7 +80,7 @@ Then go to your repo → **Actions** tab → confirm **✅ Validate Submission**
 ## 3. Repository Structure
 
 ```
-bob-ai-hackathon-[your-team-name]/
+bob-ai-hackathon-[Code Stromers]/
 │
 ├── submission.yaml          ← Structured metadata — READ BY EVALUATORS FIRST
 ├── README.md                ← Project overview — human-readable entry point
@@ -120,19 +120,21 @@ This is the **first file the evaluators read**. Fill it in carefully and complet
 
 ```yaml
 team:
-  name: "Orion Squad"                   # Your team name
+  name: "Code Stromers"                   # Your team name
   track: "AI"                           # AI | DevOps | Sustainability | Open
   lead:
-    name: "Alice Chen"
-    email: "alice.chen@ibm.com"
+    name: "Gracy Borsania"
+    email: gracyborsania@gmail.com"
   members:
-    - name: "Bob Singh"
-      email: "bob.singh@ibm.com"
-    - name: "Carol Yu"
-      email: "carol.yu@ibm.com"
+    - name: "Vishva Kotadiya"
+      email: "vishvakotadiya25@gmail.com"
+    - name: "Siya Dholariya"
+      email: "skmdmjd08@gmail.com"
+    - name: "Prushti Bhadja"
+      email: "prushtibhadja@gmail.com"
 
 submission:
-  title: "SmartOps Dashboard"
+  title: "Pharmaguide AI"
   problem_statement: >
     DevOps teams at IBM spend 3+ hours per incident manually correlating
     logs across 12 tools. This delays MTTR and causes alert fatigue for
