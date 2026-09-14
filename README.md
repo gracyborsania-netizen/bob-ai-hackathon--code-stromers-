@@ -11,7 +11,7 @@
 |---|---|
 | **Team Name** | *code stromers* |
 | **Member 1** | *Gracy* |
-| **Member 2** | *siya* |
+| **Member 2** | *Siya* |
 | **Member 3** | *Vishva* |
 | **Member 4** | *Prushti* |
 
