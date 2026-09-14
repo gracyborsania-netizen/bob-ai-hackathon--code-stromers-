@@ -54,7 +54,7 @@ repository:
 
 demo:
   video_url: "https://youtu.be/64S7NWLnfwk?si=CXtXZ1gIbhi8n5-9"
-  live_url: "NOT DEPLOYED"
+  live_url: "https://t74jltdqwfyagxbe3zv8tw.streamlit.app/"
 
 disclaimers:
   - "All data is synthetic and does not represent real patients or products"
